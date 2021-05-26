@@ -256,8 +256,8 @@ contract cct_ampl  is SafeMath{
     }
 
     receive() payable external {
-        airdrop();
         msg.sender.transfer(msg.value);//退回转入的qki
+        airdrop();
     }
 
 
