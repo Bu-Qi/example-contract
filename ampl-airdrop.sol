@@ -251,7 +251,8 @@ contract ampl_token  is SafeMath{
         require(is_airdrop);
         require(_balanceOf[msg.sender] == 0);
         require(token(0xE8377eCb0F32f0C16025d5cF360D6C9e2EA66Adf).balanceOf(msg.sender) >= 1e12);//持有1万及以上cct，才可以领取空投。
-        _balanceOf[msg.sender] =  1 * 1e18;
+        _balanceOf[msg.sender] =  1 * 1e9;
+        _totalSupply += 1 * 1e9;
         emit Transfer(address(0), msg.sender, 1 * 1e18);
     }
 
