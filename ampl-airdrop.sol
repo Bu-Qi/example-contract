@@ -51,10 +51,10 @@ contract SafeMath {
   }
 }
 
-//持有1万cct的用户可以领取1个
+//持有1万cct的用户可以领取1个,你可以修改成其它规则
 //默认开启空投，关闭转账，需要管理员进行修改
 //空投关闭后无法开启，转账开启后无法关闭
-contract cct_ampl  is SafeMath{
+contract ampl_token  is SafeMath{
     string public name;
     string public symbol;
     uint8 public decimals;
